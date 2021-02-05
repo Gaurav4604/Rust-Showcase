@@ -2,7 +2,7 @@
 extern crate piston_window;
 extern crate rand;
 
-// importing another file into this file
+// binding the files to the main file
 mod draw;
-
+mod snake;
 fn main() {}
