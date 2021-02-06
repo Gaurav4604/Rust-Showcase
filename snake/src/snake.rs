@@ -5,7 +5,7 @@ use std::collections::LinkedList; //used for manipulating snake head and tail
 
 use crate::draw::draw_block;
 
-const SNAKE_COLOR: Color = [0.00, 0.80, 0.00, 1.0]; // follow % scale of rgba standard
+const SNAKE_COLOR: Color = [0.00, 1.0, 0.00, 1.0]; // follow % scale of rgba standard
 
 // handles the movement of snake and keyboard input
 #[derive(Copy, Clone, PartialEq)]
@@ -119,7 +119,7 @@ impl Snake {
         // by setting values of enums as the following coordinates
         match moving_dir {
             Direction::Up => (head_x, head_y - 1),
-            Direction::Down => (head_x, head_y),
+            Direction::Down => (head_x, head_y + 1),
             Direction::Left => (head_x - 1, head_y),
             Direction::Right => (head_x + 1, head_y),
         }
